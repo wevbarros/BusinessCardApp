@@ -34,7 +34,6 @@ namespace VirtualCard.Models
         [Display(Name = "Telefone")]
         public int Telephone { get; set; }
 
-
     }
 
 }

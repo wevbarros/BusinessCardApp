@@ -10,15 +10,14 @@
     left: 50%;
     transform: translate(-50%,-50%);
     max-width:1200px;
-   
+    
 
 }
 
-#index th , #index td , #index h1 {
-    color:beige;
+#index th, #index td, #index h1 {
+    color: beige;
     font-size: 1.5rem;
-  
-    
+    padding: 0.5rem;
 }
 
 #negro {
