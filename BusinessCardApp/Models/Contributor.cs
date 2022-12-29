@@ -21,6 +21,11 @@ namespace VirtualCard.Models
         [Display(Name = "SobreNome")]
         public string? SurName { get; set; }
 
+        [Column("Email")]
+        [Display(Name = "Email")]
+        public string? Email { get; set; }
+
+
         [Column("Cargo")]
         [Display(Name = "Cargo")]
         public string? Office { get; set; }

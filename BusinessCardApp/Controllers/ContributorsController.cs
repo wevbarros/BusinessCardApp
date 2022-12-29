@@ -54,7 +54,7 @@ namespace BusinessCardApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,SurName,Office,Telephone")] Contributor contributor)
+        public async Task<IActionResult> Create([Bind("Id,Name,SurName,Email,Office,Telephone")] Contributor contributor)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace BusinessCardApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,SurName,Office,Telephone")] Contributor contributor)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,SurName,Email,Office,Telephone")] Contributor contributor)
         {
             if (id != contributor.Id)
             {

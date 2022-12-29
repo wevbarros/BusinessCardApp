@@ -3,10 +3,11 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<link rel="stylesheet" href="~/css/Edit.css"/> 
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
-<h4>Contributor</h4>
+<h4>Contribuidor</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,6 +25,11 @@
                 <span asp-validation-for="SurName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Office" class="control-label"></label>
                 <input asp-for="Office" class="form-control" />
                 <span asp-validation-for="Office" class="text-danger"></span>
@@ -33,17 +39,18 @@
                 <input asp-for="Telephone" class="form-control" />
                 <span asp-validation-for="Telephone" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="p-2 form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
+<br />
+<div class="float-end">
 
-<div>
-    <a asp-action="Index">Back to List</a>
+    <button type="button" class="btn btn-outline-danger"><a asp-action="Index">Voltar</a></button>
+
 </div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
