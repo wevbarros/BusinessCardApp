@@ -1,0 +1,33 @@
+﻿.table {
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px 10px 10px 10px;
+    border: 0px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0px 0px 43px -10px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width:1200px;
+    
+
+}
+
+#index th, #index td, #index h1 {
+    color: beige;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+#negro {
+
+    font-weight:bold;
+
+}
+
+#index td {
+
+    margin:3rem;
+
+}
