@@ -1,9 +1,15 @@
-FROM mcr.microsoft.com/dotnet/runtime:6.0
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+WORKDIR /App
 
-LABEL version = "1.0"
+# Copy everything
+COPY . ./
+# Restore as distinct layers
+RUN dotnet restore
+# Build and publish a release
+RUN dotnet publish -c Release -o out
 
-WORKDIR /app
-
-copy .\Projects\BusinessCardApp .
-
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
+WORKDIR /App
+COPY ./BusinessCardApp/bin/Release/net6.0 .
 ENTRYPOINT ["dotnet", "BusinessCardApp.dll"]
